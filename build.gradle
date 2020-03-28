@@ -19,6 +19,7 @@ apply plugin: 'io.spring.dependency-management' // 스프링부트 의존성 관
 //plugins {
 //    id 'java'
 //}
+//
 
 group 'org.example'
 version '1.0-SNAPSHOT'
