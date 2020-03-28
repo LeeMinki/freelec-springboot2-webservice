@@ -1,0 +1,35 @@
+buildscript {
+    ext { // 전역변수 설정
+        springBootVersion = '2.1.7.RELEASE' // 의존성 버전
+    }
+    repositories {
+        mavenCentral()
+        jcenter() // 라이브러리 업데이트 난이도 때문에 jcenter 사용
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management' // 스프링부트 의존성 관리
+
+//plugins {
+//    id 'java'
+//}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
